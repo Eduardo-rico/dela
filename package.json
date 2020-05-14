@@ -1,0 +1,20 @@
+{
+  "name": "dela",
+  "version": "1.0.0",
+  "description": "1.- API REST EN EXPRESS.JS\r ·· A.- RUTAS: \r ··*/usuarios/ GET -> Lista Usuarios\r ··*/usuarios/:id GET -> Lista un Usuario con un id especifico\r ··*/usuarios/nuevo/ POST -> Genera un nuevo usuario\r ··*/usuarios/:id PUT -> cambia un Usuario especifico\r ··*/usuarios/eliminar/:id DELETE -> Eliminar un Usuario especifico",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eduardo-rico/dela.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Eduardo-rico/dela/issues"
+  },
+  "homepage": "https://github.com/Eduardo-rico/dela#readme"
+}
