@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/Eduardo-rico/dela/issues"
   },
-  "homepage": "https://github.com/Eduardo-rico/dela#readme"
+  "homepage": "https://github.com/Eduardo-rico/dela#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "sequelize": "^5.21.8",
+    "sqlite3": "^4.2.0"
+  }
 }
