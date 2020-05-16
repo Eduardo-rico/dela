@@ -55,12 +55,21 @@ app.post("/usuarios", async (req, res) => {
 
 //TODO: EL PUT y EL DELETE
 
-app.put("/usuarios/modificar/:id", (req, res) => {
-  res.json("TODO");
+app.put("/usuarios/modificar/:id", async (req, res) => {
+  const { id } = req.params; //el id esta en la url, lo guardamos en una constante con el mismo nombre
+  const { nombre, apellido } = req.body; //el nombre y el apellido van a salir del json, es decir esta en req.body
+  const usuarioModificado = await Usuario.update(
+    { nombre, apellido },
+    { where: { id: id } }
+  ); // cambiamos al usuario donde el id coincida con el id de params.
+  // es lo mismo escribir const id = req.params.id y const {id} = req.params
+  res.json(usuarioModificado); //respondemos con un json que tiene el usuario modificado
 });
 
-app.delete("/usuarios/eliminar/:id", (req, res) => {
-  res.json("TODO");
+app.delete("/usuarios/eliminar/:id", async (req, res) => {
+  const { id } = req.params;
+  await Usuario.destroy({ where: { id } }); // es lo mismo poner {id: id} a {id}
+  res.json({ mensaje: "Usuario Eliminado" });
 });
 
 /**APP ESCUCHA PUERTO */
